@@ -26,10 +26,10 @@ get_draw_from_id(game, id)
 The get_draw_from_id(game, id) returns the results from a specific draw with the id from the chosen game.
 The returned value is a list, except if the chosen game is joker or lotto in which it's a tuple (Nlist(list), Extra(int)).
 
-get_draw_from_id_range(game, startid, endid)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+get_draws_from_id_range(game, startid, endid)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The get_draw_from_id_range(game, startid, endid) returns all the results from a specific id range from the chosen game.
+The get_draws_from_id_range(game, startid, endid) returns all the results from a specific id range from the chosen game.
 The returned value is a list with each element being a tuple. The first element of the tuple is the draw id (int). The
 second is the numbers list (list) and the third element is the extra number (int).
 
