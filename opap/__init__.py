@@ -73,11 +73,14 @@ def get_draw_from_id(game, id):
 
     return rval
 
-def get_draw_from_id_range(game, istart, iend):
+def get_draws_from_id_range(game, istart, iend):
     gameid = get_draw_id(game)
     surl = url + "draws/v3.0/" + gameid + "/draw-id/" + str(istart) + "/" + str(iend)
+    par = {
+        "limit" : "180"
+    }
 
-    resp = requests.get(surl)
+    resp = requests.get(surl, params=par)
     j = resp.text
     jdata = json.loads(j)
     rval = []
@@ -97,8 +100,11 @@ def get_draw_from_id_range(game, istart, iend):
 def get_last_draws(game, n):
     gameid = get_draw_id(game)
     surl = url + "draws/v3.0/" + gameid + "/last/" + str(int(n) + 1)
+    par = {
+        "limit": "180"
+    }
 
-    resp = requests.get(surl)
+    resp = requests.get(surl, params=par)
     j = resp.text
     jdata = json.loads(j)[1:]
     rval = []
@@ -118,7 +124,11 @@ def get_draws_between(game, dstart, dend):
     gameid = get_draw_id_ex_k(game)
     surl = url + "draws/v3.0/" + gameid + "/draw-date/" + dstart + "/" + dend
 
-    resp = requests.get(surl)
+    par = {
+        "limit": "180"
+    }
+
+    resp = requests.get(surl, params=par)
     j = resp.text
     jdata = json.loads(j)
     rval = []
@@ -137,8 +147,11 @@ def get_draws_between(game, dstart, dend):
 def get_draw_ids_between(game, dstart, dend):
     gameid = get_draw_id(game)
     surl = url + "draws/v3.0/" + gameid + "/draw-date/" + str(dstart) + "/" + str(dend) + "/draw-id"
+    par = {
+        "limit": "30"
+    }
 
-    resp = requests.get(surl)
+    resp = requests.get(surl, params=par)
     j = resp.text
     jdata = json.loads(j)
     rval = []
@@ -176,3 +189,4 @@ class DrawNameException(Exception):
     def __init__(self, expression, message):
         self.expression = expression
         self.message = message
+

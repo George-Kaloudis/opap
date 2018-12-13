@@ -1,6 +1,6 @@
 Modules
 =======
-If a module retunrs multiple results due to the api they are capped at 10.
+If a module retunrs multiple results due to the api they are capped at 180.
 
 Arguments
 ^^^^^^^^^
@@ -10,7 +10,7 @@ game : "super3", "extra5", "proto", "lotto", "kino" and "joker" (String)
 
 id : int
 
-dstart, dend (date functions) : String YYYY-MM-DD (example: 2018-05-23)
+dstart, dend (date functions) : String YYYY-MM-DD (example: 2018-05-23) The difference can't be more than 3 months.
 
 startid, endid (id functions): Int
 
