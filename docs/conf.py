@@ -20,7 +20,7 @@
 # -- Project information -----------------------------------------------------
 
 
-project = 'hbapi'
+project = 'opap'
 copyright = '2018, George Kaloudis'
 author = 'George Kaloudis'
 
