@@ -1,4 +1,4 @@
-Welcome to hbapi's documentation!
+Welcome to opap's documentation!
 =================================
 
 This library was made as part of a project. Do not expect it to be updated continuously. If

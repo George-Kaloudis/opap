@@ -1,5 +1,4 @@
-hbapi
+opap
 ========
 
-hbapi is a basic api for the site Humble Bundle
-
+opap is a library to access OPAP data.

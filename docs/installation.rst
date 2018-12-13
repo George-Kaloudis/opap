@@ -1,6 +1,6 @@
 Installation
 ============
 
-Install hbapi by running::
+Install opap by running::
 
-    pip install hbapi
+    pip install opap

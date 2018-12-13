@@ -1,7 +1,7 @@
-hbapi
+opap
 ========
 
-hbapi is a library to access opap data.
+opap is a library to access OPAP data.
 
 Look how easy it is to use::
 
@@ -24,7 +24,7 @@ Features
 Installation
 ------------
 
-Install hbapi by running::
+Install opap by running::
 
     pip install opap
 
