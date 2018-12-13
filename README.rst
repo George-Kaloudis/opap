@@ -1,38 +1,32 @@
 hbapi
 ========
 
-hbapi is a basic api for the site Humble Bundle
+hbapi is a library to access opap data.
 
 Look how easy it is to use::
 
-    import hbapi
+    import opap
 
-    dict = hbapi.get_bundles()
-
-    for bundle, bundle_url in dict.items():
-
-        list = hbapi.get_items(bundle, bundle_url)
-        print("Bundle Name:\n")
-        print(list[0])
-        print("\n")
-
-        for item in list[1:]:
-            print("Price: \n", item[0])
-            print("Contains: \n", item[1])
-            print("\n\n")
+    opap.get_last_draw("kino")
 
 Features
 --------
 
-- Return the bundles in a dictionary
-- Return the bundle's name, price levels and items
+- Retrieve last draw's results
+- Retrieve draw's results from specific draw id
+- Retrieve draw's results from an id range
+- Retrieve the last n draw's results
+- Retrieve draw's results between specific dates
+- Retrieve draw id's between specific dates
+- Retrieve last draw's id
+- Retrieve next draw's id
 
 Installation
 ------------
 
 Install hbapi by running::
 
-    pip install hbapi
+    pip install opap
 
 License
 -------
