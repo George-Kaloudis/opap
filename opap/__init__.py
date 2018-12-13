@@ -1,7 +1,6 @@
 name = "opap"
 
 import requests, json
-from pprint import pprint
 url = "https://api.opap.gr/"
 
 #==========================================================================
@@ -59,7 +58,7 @@ def get_last_draw(game):
 
 def get_draw_from_id(game, id):
     gameid = get_draw_id(game)
-    surl = url + "draws/v3.0/" + gameid + "/" + id
+    surl = url + "draws/v3.0/" + gameid + "/" + str(id)
 
     resp = requests.get(surl)
     j = resp.text
@@ -74,9 +73,9 @@ def get_draw_from_id(game, id):
 
     return rval
 
-def get_draw_from_id_range(game, start, end):
+def get_draw_from_id_range(game, istart, iend):
     gameid = get_draw_id(game)
-    surl = url + "draws/v3.0/" + gameid + "/draw-id/" + start + "/" + end
+    surl = url + "draws/v3.0/" + gameid + "/draw-id/" + str(istart) + "/" + str(iend)
 
     resp = requests.get(surl)
     j = resp.text
@@ -115,9 +114,9 @@ def get_last_draws(game, n):
 
     return rval
 
-def get_draws_between(game, start, end):
+def get_draws_between(game, dstart, dend):
     gameid = get_draw_id_ex_k(game)
-    surl = url + "draws/v3.0/" + gameid + "/draw-date/" + start + "/" + end
+    surl = url + "draws/v3.0/" + gameid + "/draw-date/" + dstart + "/" + dend
 
     resp = requests.get(surl)
     j = resp.text
@@ -135,9 +134,9 @@ def get_draws_between(game, start, end):
 
     return rval
 
-def get_draw_ids_between(game, start, end):
+def get_draw_ids_between(game, dstart, dend):
     gameid = get_draw_id(game)
-    surl = url + "draws/v3.0/" + gameid + "/draw-date/" + start + "/" + end + "/draw-id"
+    surl = url + "draws/v3.0/" + gameid + "/draw-date/" + str(dstart) + "/" + str(dend) + "/draw-id"
 
     resp = requests.get(surl)
     j = resp.text
