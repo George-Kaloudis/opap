@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="opap",
-    version="1.0.0",
+    version="1.0.1",
     author="George Kaloudis",
     author_email="georgekal123@gmail.com",
     description="An api that collects data from opap.",
