@@ -28,7 +28,7 @@ The returned value is a list, except if the chosen game is joker or lotto in whi
 get_draw_from_id_range(game, startid, endid)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The get_draw_from_id_range(game, start, end) returns all the results from a specific id range from the chosen game.
+The get_draw_from_id_range(game, startid, endid) returns all the results from a specific id range from the chosen game.
 The returned value is a list with each element being a tuple. The first element of the tuple is the draw id (int). The
 second is the numbers list (list) and the third element is the extra number (int).
 
@@ -42,14 +42,14 @@ second is the numbers list (list) and the third element is the extra number (int
 get_draws_between(game, dstart, dend)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The get_draws_between(game, start, end) returns the results from the draws between the specified dates from the chosen game.
+The get_draws_between(game, dstart, dend) returns the results from the draws between the specified dates from the chosen game.
 The returned value is a list with each element being a tuple. The first element of the tuple is the draw id (int). The
 second is the numbers list (list) and the third element is the extra number (int).
 
 get_draw_ids_between(game, dstart, dend)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The get_draws_between_id(game, start, end) returns the results from the draws between the specified ids from the chosen game.
+The get_draws_between_id(game, dstart, dend) returns the results from the draws between the specified ids from the chosen game.
 The returned value is a list with each element being a tuple. The first element of the tuple is the draw id (int). The
 second is the numbers list (list) and the third element is the extra number (int).
 
