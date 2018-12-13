@@ -1,5 +1,6 @@
 Modules
 =======
+If a module retunrs multiple results due to the api they are capped at 10.
 
 Arguments
 ^^^^^^^^^
